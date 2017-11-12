@@ -357,6 +357,7 @@ PRODUCT_PACKAGES += \
     init.mmi.rc \
     init.recovery.qcom.rc \
     init.mmi.usb.rc \
+    init.safailnet.rc \
     init.qcom.rc \
     init.qcom.sensors.sh
 
