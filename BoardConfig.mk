@@ -121,6 +121,9 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USES_NON_TREBLE_CAMERA := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 
+# APEX image
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
 # Charger
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_CHARGER_ENABLE_SUSPEND := true
