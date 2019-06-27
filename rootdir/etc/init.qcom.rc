@@ -505,11 +505,11 @@ service vendor.thermal-engine /vendor/bin/thermal-engine
    group root
    writepid /dev/cpuset/system-background/tasks
 
-service vendor.time_daemon /vendor/bin/time_daemon
-   class late_start
-   user root
-   group root
-   writepid /dev/cpuset/system-background/tasks
+service time_daemon /vendor/bin/time_daemon
+    class main
+    user system
+    group system
+    capabilities SYS_TIME
 
 service audiod /vendor/bin/audiod
    class late_start
