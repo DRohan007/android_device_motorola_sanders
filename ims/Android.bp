@@ -4,3 +4,10 @@ cc_library {
     shared_libs: ["libbase"],
     vendor: true
 }
+
+cc_library {
+    name: "libui_shim",
+    srcs: ["GraphicBuffer.cpp"],
+    shared_libs: ["libui"],
+    vendor: true
+}
