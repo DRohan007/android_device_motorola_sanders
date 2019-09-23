@@ -82,7 +82,7 @@ void vendor_load_properties()
 
     // fingerprint
     property_override("ro.build.description", "sanders-user 8.1.0 OPS28.65-36 9fea release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/walleye/walleye:9/PPP3.180510.008/4811556:user/release-keys"); // safetynet hax
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "motorola/sanders/sanders:8.1.0/OPS28.65-36/9fea:user/release-keys"); 
 
     // rmt_storage
     std::string device = GetProperty("ro.boot.device", "");
