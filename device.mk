@@ -203,12 +203,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.sanders \
-    fingerprint.msm8953 \
-    fp_c1212.zip
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fingerprint_c1212/fp_c1212.zip:system/etc/fp_c1212.zip \
-    $(LOCAL_PATH)/fingerprint_c1212/patch_fingerprint.sh:system/etc/patch_fingerprint.sh
+    fingerprint.msm8953 
 
 # FM
 PRODUCT_PACKAGES += \
