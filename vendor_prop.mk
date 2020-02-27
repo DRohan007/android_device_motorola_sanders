@@ -61,6 +61,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bluetooth.map=true \
     persist.bt.enableAptXHD=true
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    vendor.bluetooth.soc=smd \
+    ro.fm.transmitter=false
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=1 \
@@ -133,10 +137,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0 \
     vendor.gralloc.disable_wb_ubwc=1 \
     persist.sys.wfd.nohdcp=1
-
-# FM
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fm.transmitter=false
 
 # HWUI properties
 PRODUCT_PROPERTY_OVERRIDES += \
