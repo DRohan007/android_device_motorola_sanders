@@ -85,7 +85,7 @@ void vendor_load_properties()
 
     // fingerprint
     property_override("ro.build.description", "sanders-user 8.1.0 OPPS28.65-36-11-4 b6557 release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ3A.200605.001/6392402:user/release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys");
 
     // rmt_storage
     std::string device = GetProperty("ro.boot.device", "");
