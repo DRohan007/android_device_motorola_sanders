@@ -5,11 +5,12 @@
     "branch": "ten"
   },
   {
-    "repository": "vendor_motorola",
-    "target_path": "vendor/motorola",
+    "remote": "pixel-devices-bitbucket",
+    "repository": "vendor_motorola_sanders",
+    "target_path": "vendor/motorola/sanders",
     "branch": "ten"
   },
-  {
+  { 
     "remote": "lineage",
     "repository": "android_system_qcom",
     "target_path": "system/qcom",
