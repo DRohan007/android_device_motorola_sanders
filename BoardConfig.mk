@@ -73,15 +73,19 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_SEPARATED_DT := true
 BOARD_DTBTOOL_ARGS := --force-v3
+BOARD_KERNEL_PREBUILT_DT := true
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/kernel
 BOARD_BOOT_HEADER_VERSION := 0
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100  --header_version $(BOARD_BOOT_HEADER_VERSION)
-TARGET_KERNEL_CLANG_COMPILE := true
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100  --header_version $(BOARD_BOOT_HEADER_VERSION)  --dt device/motorola/sanders/dt.img
 TARGET_KERNEL_ARCH := arm64
+ifeq ($(TARGET_PREBUILT_KERNEL),)
 TARGET_KERNEL_CONFIG := sanders_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/sanders
+BOARD_KERNEL_SEPARATED_DT := true
+TARGET_KERNEL_CLANG_COMPILE := true
 KERNEL_TOOLCHAIN_PATH := $(TOP)/prebuilts/clang/host/linux-x86/clang-r353983c1/bin/clang
+endif
 
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
